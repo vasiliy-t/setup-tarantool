@@ -1476,7 +1476,7 @@ function run() {
         try {
             const downloadPath = yield tc.downloadTool("https://github.com/vasiliy-t/tarantool-versions/releases/download/2.7.0/tarantool.tar.gz", undefined, undefined);
             core.info('Extracting Tarantool...');
-            let extPath = yield tc.extractZip(downloadPath);
+            let extPath = yield tc.extractTar(downloadPath);
             core.info(`Successfully extracted go to ${extPath}`);
             core.addPath(path_1.default.join(extPath, 'bin'));
         }
