@@ -14,3 +14,6 @@ jobs:
         uses: ./
         with:
           tarantool-version: "2.7.0"
+
+      - name: test tarantool is in PATH
+        run: echo "print(require('uuid').str()) os.exit(0)" | tarantool
